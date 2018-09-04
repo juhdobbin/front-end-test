@@ -10,7 +10,7 @@ import { SkyoneService } from './services/skyone.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatGridListModule, MatProgressBarModule, MatSidenavModule, MatToolbarModule, MatIconModule,
-  MatTableModule, MatPaginatorModule, MatBadgeModule, MatTooltipModule, MatListModule, MatInputModule
+  MatTableModule, MatPaginatorModule, MatBadgeModule, MatTooltipModule, MatListModule, MatInputModule, MatSortModule, MatButtonModule
 } from '@angular/material';
 import { PhotosListComponent } from './photos-list/photos-list.component';
 import { HeaderComponent } from './header/header.component';
@@ -35,10 +35,12 @@ import { MenuLateralComponent } from './menu-lateral/menu-lateral.component';
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
     MatBadgeModule,
     MatTooltipModule,
     MatListModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [SkyoneService],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableDataSource, MatPaginator, PageEvent, MatSort } from '@angular/material';
 
 import { SkyoneService } from '../services/skyone.service';
-import {PhotoData} from './photo-data.model';
+import { PhotoData } from './photo-data.model';
 
 @Component({
   selector: 'app-photos-list',
@@ -42,6 +42,7 @@ export class PhotosListComponent implements OnInit {
         }
       );
   }
+
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }

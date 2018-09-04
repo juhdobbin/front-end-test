@@ -1,10 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <app-header></app-header>
-<mat-drawer-container>
-  <mat-drawer mode="side" opened>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened [fixedInViewport]="fixed" [fixedTopGap]="0" [fixedBottomGap]="0">
     <app-menu-lateral></app-menu-lateral>
-  </mat-drawer>
-  <mat-drawer-content>
+    <button mat-button (click)="sidenav.toggle()" class="close-sidenav">
+      <mat-icon class="icon">keyboard_arrow_left</mat-icon>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="sidenav.toggle()" class="toggle-menu" *ngIf="sidenav.isOpen">
+      <mat-icon class="icon">keyboard_arrow_left</mat-icon>
+    </button>
     <router-outlet></router-outlet>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

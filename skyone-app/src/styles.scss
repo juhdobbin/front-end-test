@@ -1,5 +1,6 @@
 // variaveis
-$primary-color: #2c387e;
+$primary-color: #343a40;
+$secundary-color:#222529;
 $link-menu-color:#fff;
 
 html,
@@ -21,6 +22,10 @@ body {
   flex: 1 1 auto;
 }
 
+.mat-toolbar.mat-primary {
+  background-color: $primary-color;
+}
+
 .icon+.icon {
   margin-left: 20px;
 }
@@ -33,13 +38,38 @@ body {
 .mat-drawer {
   background-color: $primary-color;
 }
+.mat-drawer-transition .mat-drawer{
+  transform: translate3d(-70%, 0, 0);
+  visibility: visible!important;
+}
 
 .menu-lateral.mat-nav-list {
   width: 250px;
 
   .mat-list-item {
     color: $link-menu-color;
+
+    .icon {
+      margin-right: 10px;
+    }
   }
+}
+
+.close-sidenav {
+  width: 100%;
+  background-color: $secundary-color;
+  color: $link-menu-color;
+  position: fixed;
+  bottom: 0;
+}
+
+.toggle-menu {
+  position: absolute;
+  left: -45px;
+  top: 45%;
+  background: red;
+  height: 80px;
+  border-radius: 50%;
 }
 
 // table
