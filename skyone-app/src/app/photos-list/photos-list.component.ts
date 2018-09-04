@@ -34,7 +34,6 @@ export class PhotosListComponent implements OnInit {
       .getPhotos()
       .subscribe(
         data => {
-          console.log(this.paginator);
           this.photosList = data;
           this.dataSource = new MatTableDataSource(this.photosList);
           this.dataSource.paginator = this.paginator;
@@ -42,6 +41,9 @@ export class PhotosListComponent implements OnInit {
           this.resultsLength = this.photosList.length;
         }
       );
+  }
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }
