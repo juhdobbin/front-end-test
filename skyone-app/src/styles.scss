@@ -1,0 +1,48 @@
+// variaveis
+$primary-color: #2c387e;
+$link-menu-color:#fff;
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mat-drawer-content {
+  padding: 30px;
+}
+
+// header
+.spacer-horizontal {
+  flex: 1 1 auto;
+}
+
+.icon+.icon {
+  margin-left: 20px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+// menu lateral
+.mat-drawer {
+  background-color: $primary-color;
+}
+
+.menu-lateral.mat-nav-list {
+  width: 250px;
+
+  .mat-list-item {
+    color: $link-menu-color;
+  }
+}
+
+// table
+table {
+  width: 100%;
+}
