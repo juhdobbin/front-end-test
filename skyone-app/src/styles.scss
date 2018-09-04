@@ -38,10 +38,6 @@ body {
 .mat-drawer {
   background-color: $primary-color;
 }
-.mat-drawer-transition .mat-drawer{
-  transform: translate3d(-70%, 0, 0);
-  visibility: visible!important;
-}
 
 .menu-lateral.mat-nav-list {
   width: 250px;
@@ -64,12 +60,10 @@ body {
 }
 
 .toggle-menu {
-  position: absolute;
-  left: -45px;
-  top: 45%;
-  background: red;
-  height: 80px;
-  border-radius: 50%;
+   position: absolute !important;
+   left: -30px;
+   top: -5px;
+   padding: 5px !important;
 }
 
 // table
